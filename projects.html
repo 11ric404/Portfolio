@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="projects-page">
+    <div class="mobile-overlay">
+        <p>This portfolio is not accessible on a mobile device</p>
+    </div>
+    <div class="custom-cursor"></div>
+    <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
+    <div class="content">
+        <div class="projects-container">
+            <!-- Content will be added later -->
+        </div>
+    </div>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.projects-container').classList.add('fade-in');
+            document.querySelector('.back-button').classList.add('fade-in');
+        });
+    </script>
+</body>
+</html> 

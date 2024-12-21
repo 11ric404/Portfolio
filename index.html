@@ -8,21 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mobile-overlay">
-        <p>This portfolio is not accessible on a mobile device</p>
-    </div>
     <div class="custom-cursor"></div>
     <div class="content">
-        <h1 class="hover-element name-container">
-            <span class="first-name">Ric</span>
-            <img src="assets/rocket.png" alt="Rocket" class="rocket">
-            <span class="last-name">Rebull</span>
-        </h1>
+        <div class="hover-element title-container">
+            <img src="assets/title.png" alt="Ric Rebull" class="title-image">
+        </div>
         <p class="hover-element">Information Technology Student at UCF</p>
         <div class="nav-buttons">
             <a href="about.html" class="nav-button hover-element" onclick="handleNavigation(event)">ABOUT</a>
-            <a href="projects.html" class="nav-button hover-element">PROJECTS</a>
-            <a href="contact.html" class="nav-button hover-element">CONTACT</a>
+            <a href="contact.html" class="nav-button hover-element" onclick="handleNavigation(event)">CONTACT</a>
         </div>
     </div>
 
@@ -38,7 +32,7 @@
             const mouseY = (e.clientY / window.innerHeight) - 0.5;
 
             hoverElements.forEach(element => {
-                const movementStrength = element.tagName === 'H1' ? 45 : 
+                const movementStrength = element.tagName === 'IMG' ? 45 : 
                                        element.tagName === 'P' ? 35 : 15;
                 
                 const translateX = mouseX * movementStrength;
