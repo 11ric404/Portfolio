@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ric Rebull</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <div class="content">
+        <h1 class="hover-element name-container">
+            <span class="first-name">Ric</span>
+            <img src="assets/rocket.png" alt="Rocket" class="rocket">
+            <span class="last-name">Rebull</span>
+        </h1>
+        <p class="hover-element">Information Technology Student at UCF</p>
+        <div class="nav-buttons">
+            <a href="about.html" class="nav-button hover-element" onclick="handleNavigation(event)">ABOUT</a>
+            <a href="projects.html" class="nav-button hover-element">PROJECTS</a>
+            <a href="contact.html" class="nav-button hover-element">CONTACT</a>
+        </div>
+    </div>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        const hoverElements = document.querySelectorAll('.hover-element');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 20 + 'px';
+            cursor.style.top = e.clientY - 20 + 'px';
+
+            const mouseX = (e.clientX / window.innerWidth) - 0.5;
+            const mouseY = (e.clientY / window.innerHeight) - 0.5;
+
+            hoverElements.forEach(element => {
+                const movementStrength = element.tagName === 'H1' ? 45 : 
+                                       element.tagName === 'P' ? 35 : 15;
+                
+                const translateX = mouseX * movementStrength;
+                const translateY = mouseY * movementStrength;
+                
+                element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+            });
+        });
+
+        function handleNavigation(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = e.target.href;
+            }, 500);
+        }
+    </script>
+</body>
+</html> 
