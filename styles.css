@@ -529,8 +529,8 @@ p {
     }
 
     .title-image {
-        content: url('assets/titlesmaller.png');
-        height: 15px;
+        height: 32px;
+        width: auto;
         transform: translateX(0);
     }
 
