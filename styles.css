@@ -529,7 +529,7 @@ p {
     }
 
     .title-image {
-        height: 20px !important;
+        height: 60px !important;
         width: auto;
         transform: translateX(0);
     }
@@ -565,9 +565,12 @@ p {
     }
 
     .profile-image {
-        position: relative;
-        margin: 2rem auto;
-        transform: none;
+        display: none;
+    }
+
+    .info-box {
+        width: 95%;
+        max-width: 600px;
     }
 
     /* Contact page mobile styles */
