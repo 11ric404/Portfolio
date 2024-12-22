@@ -742,14 +742,14 @@ p {
 
 @media (max-width: 768px) {
     .title-image {
-        height: 90px;
+        height: 60px !important;
         width: auto;
     }
 }
 
 @media (pointer: coarse) and (hover: none) {
     .title-image {
-        height: 90px;
+        height: 60px !important;
         width: auto;
     }
 }

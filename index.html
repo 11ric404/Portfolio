@@ -23,24 +23,27 @@
     <script>
         const cursor = document.querySelector('.custom-cursor');
         const hoverElements = document.querySelectorAll('.hover-element');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX - 20 + 'px';
-            cursor.style.top = e.clientY - 20 + 'px';
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
 
-            const mouseX = (e.clientX / window.innerWidth) - 0.5;
-            const mouseY = (e.clientY / window.innerHeight) - 0.5;
+        if (!isTouchDevice) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX - 20 + 'px';
+                cursor.style.top = e.clientY - 20 + 'px';
 
-            hoverElements.forEach(element => {
-                const movementStrength = element.tagName === 'IMG' ? 45 : 
-                                       element.tagName === 'P' ? 35 : 15;
-                
-                const translateX = mouseX * movementStrength;
-                const translateY = mouseY * movementStrength;
-                
-                element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                const mouseX = (e.clientX / window.innerWidth) - 0.5;
+                const mouseY = (e.clientY / window.innerHeight) - 0.5;
+
+                hoverElements.forEach(element => {
+                    const movementStrength = element.tagName === 'IMG' ? 45 : 
+                                           element.tagName === 'P' ? 35 : 15;
+                    
+                    const translateX = mouseX * movementStrength;
+                    const translateY = mouseY * movementStrength;
+                    
+                    element.style.transform = `translate(${translateX}px, ${translateY}px)`;
+                });
             });
-        });
+        }
 
         function handleNavigation(e) {
             e.preventDefault();
