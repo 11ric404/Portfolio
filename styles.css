@@ -29,6 +29,18 @@
     }
 }
 
+@keyframes mobileBreath {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -593,12 +605,15 @@ p {
     }
 
     body::before {
-        animation: none;
-        transform: none;
-        width: 100%;
-        height: 100%;
+        position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        animation: 
+            hueShift 8s infinite ease-in-out,
+            breathe 10s infinite ease-in-out;
+        transform-origin: center center;
     }
 }
 
@@ -723,12 +738,15 @@ p {
     }
 
     body::before {
-        animation: none;
-        transform: none;
-        width: 100%;
-        height: 100%;
+        position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        animation: 
+            hueShift 8s infinite ease-in-out,
+            breathe 10s infinite ease-in-out;
+        transform-origin: center center;
     }
 }
 
@@ -771,7 +789,7 @@ p {
         padding: 0;
         position: relative;
         width: 90vw;
-        margin: 2rem auto;
+        margin: 4rem auto 2rem auto;
     }
 
     .mobile-profile-image {
@@ -820,11 +838,11 @@ p {
 
     .info-box.mobile-only {
         display: block !important;
-        width: 90vw !important;
-        margin: 2rem auto;
+        width: 80vw !important;
+        margin: 1rem auto;
         background: rgba(255, 255, 255, 0.95);
-        padding: 1.5rem;
-        border-radius: 15px;
+        padding: 0.6rem;
+        border-radius: 8px;
         position: relative;
         box-shadow: 
             0 0 30px rgba(255, 255, 255, 0.1),
@@ -847,16 +865,16 @@ p {
     }
 
     .info-box.mobile-only h2 {
-        font-size: 1.2rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
         color: #333;
     }
 
     .info-box.mobile-only p,
     .info-box.mobile-only li {
-        font-size: 1rem;
+        font-size: 0.7rem;
         color: #444;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.2rem;
     }
 }
 
@@ -886,7 +904,10 @@ p {
         left: 0;
         width: 100%;
         height: 100%;
-        animation: none;
+        animation: 
+            hueShift 8s infinite ease-in-out,
+            breathe 10s infinite ease-in-out;
+        transform-origin: center center;
     }
 }
   </rewritten_file>
