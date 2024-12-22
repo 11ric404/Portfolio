@@ -34,6 +34,7 @@ html, body {
     height: 100vh;
     overflow: hidden;
     font-family: "graphik", sans-serif;
+    background-color: black;
 }
 
 body::before {
