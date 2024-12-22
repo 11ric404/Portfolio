@@ -736,14 +736,14 @@ p {
 }
 
 .title-image {
-    height: 8rem;
+    height: 50px;
     width: auto;
 }
 
 @media (pointer: coarse) and (hover: none) {
     .title-image {
-        height: 6rem;
-        transform: translateX(0);
+        height: 20px;
+        width: auto;
     }
 }
   </rewritten_file>
