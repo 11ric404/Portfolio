@@ -732,17 +732,24 @@ p {
     justify-content: center;
     align-items: center;
     margin-bottom: 0.2rem;
-    transform: translateX(20px);
+    transform: translateX(0);
 }
 
 .title-image {
-    height: 50px;
+    height: 150px;
     width: auto;
+}
+
+@media (max-width: 768px) {
+    .title-image {
+        height: 90px;
+        width: auto;
+    }
 }
 
 @media (pointer: coarse) and (hover: none) {
     .title-image {
-        height: 20px;
+        height: 90px;
         width: auto;
     }
 }
