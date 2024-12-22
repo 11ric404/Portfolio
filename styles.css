@@ -757,5 +757,30 @@ p {
         width: auto;
     }
 }
+
+.info-box.empty {
+    display: none;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    .info-box.empty {
+        display: block;
+    }
+}
+
+.mobile-profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    .info-box.empty {
+        display: block;
+    }
+}
   </rewritten_file>
   
