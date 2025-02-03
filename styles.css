@@ -1050,5 +1050,57 @@ p {
     font-style: normal;
     line-height: 1.4;
 }
+
+.overdue-box {
+    width: 400px !important;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: transparent;
+    box-shadow: none;
+}
+
+.overdue-box::before {
+    display: none;
+}
+
+.overdue-box:hover {
+    transform: translateY(-5px);
+}
+
+.overdue-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(69, 183, 209, 0.1),
+        0 0 100px rgba(160, 108, 213, 0.1);
+}
+
+.projects-page .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.video-container {
+    width: 376px;
+    height: 848px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(69, 183, 209, 0.1),
+        0 0 100px rgba(160, 108, 213, 0.1);
+}
   </rewritten_file>
   

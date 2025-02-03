@@ -14,9 +14,9 @@
     <div class="custom-cursor"></div>
     <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
     <div class="content">
-        <div class="projects-container">
-            <!-- Content will be added later -->
-        </div>
+        <a href="overdue.html" class="info-box overdue-box" onclick="handleNavigation(event)">
+            <img src="assets/ezgif-7e8f92c06f05d.gif" alt="Overdue" class="overdue-gif">
+        </a>
     </div>
 
     <script>
@@ -38,7 +38,6 @@
         }
 
         window.addEventListener('load', () => {
-            document.querySelector('.projects-container').classList.add('fade-in');
             document.querySelector('.back-button').classList.add('fade-in');
         });
     </script>
