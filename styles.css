@@ -1053,7 +1053,7 @@ p {
 }
 
 .overdue-box {
-    width: 320px !important;
+    width: 330px !important;
     margin: 0;
     padding: 0;
     cursor: pointer;
@@ -1061,7 +1061,7 @@ p {
     background: transparent;
     box-shadow: none;
     position: relative;
-    top: 25vh;
+    top: 0;
 }
 
 .overdue-box::before {
@@ -1073,7 +1073,7 @@ p {
 }
 
 .overdue-gif {
-    width: 320px;
+    width: 330px;
     height: auto;
     border-radius: 10px;
     box-shadow: 
@@ -1207,7 +1207,7 @@ p {
 
 /* Add this to ensure the info-box width doesn't override */
 .info-box.overdue-box {
-    width: 320px !important;
+    width: 330px !important;
 }
 
 @media (pointer: coarse) and (hover: none) {
@@ -1259,6 +1259,52 @@ p {
     .video-container iframe {
         width: 100%;
         height: 100%;
+    }
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20vh;
+}
+
+.jobcord-box {
+    width: 330px !important;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: transparent;
+    box-shadow: none;
+}
+
+.jobcord-box::before {
+    display: none;
+}
+
+.jobcord-box:hover {
+    transform: translateY(-5px);
+}
+
+.jobcord-img {
+    width: 330px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 30px rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(69, 183, 209, 0.1),
+        0 0 100px rgba(160, 108, 213, 0.1);
+}
+
+@media (pointer: coarse) and (hover: none) {
+    .projects-grid {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 4rem;
     }
 }
   </rewritten_file>
