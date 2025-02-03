@@ -1090,6 +1090,10 @@ p {
     width: 376px;
     height: 848px;
     margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .video-container iframe {
@@ -1101,6 +1105,15 @@ p {
         0 0 30px rgba(255, 255, 255, 0.1),
         0 0 60px rgba(69, 183, 209, 0.1),
         0 0 100px rgba(160, 108, 213, 0.1);
+}
+
+.projects-page .hover-element {
+    transform: none !important;
+    transition: none !important;
+}
+
+.projects-page .content {
+    transform: none !important;
 }
   </rewritten_file>
   

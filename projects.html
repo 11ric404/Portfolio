@@ -14,7 +14,7 @@
     <div class="custom-cursor"></div>
     <a href="index.html" class="back-button" onclick="handleNavigation(event)">← Back</a>
     <div class="content">
-        <a href="overdue.html" class="info-box overdue-box" onclick="handleNavigation(event)">
+        <a href="overdue.html" class="info-box overdue-box" onclick="handleOverdueClick(event)">
             <img src="assets/ezgif-7e8f92c06f05d.gif" alt="Overdue" class="overdue-gif">
         </a>
     </div>
@@ -34,6 +34,16 @@
             
             setTimeout(() => {
                 window.location = e.target.href;
+            }, 500);
+        }
+
+        function handleOverdueClick(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = 'overdue.html';
             }, 500);
         }
 
