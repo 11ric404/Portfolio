@@ -745,11 +745,12 @@ p {
 }
 
 .projects-page .content {
-    margin-top: 0;
-    padding-top: 8vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin-top: 0;
+    padding: 0;
 }
 
 .linkedin-button {
@@ -1052,13 +1053,15 @@ p {
 }
 
 .overdue-box {
-    width: 400px !important;
-    margin: 0 auto;
+    width: 320px !important;
+    margin: 0;
     padding: 0;
     cursor: pointer;
     transition: transform 0.3s ease;
     background: transparent;
     box-shadow: none;
+    position: relative;
+    top: 25vh;
 }
 
 .overdue-box::before {
@@ -1070,7 +1073,7 @@ p {
 }
 
 .overdue-gif {
-    width: 100%;
+    width: 320px;
     height: auto;
     border-radius: 10px;
     box-shadow: 
@@ -1080,20 +1083,20 @@ p {
 }
 
 .projects-page .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     min-height: 100vh;
+    padding-top: 4rem;
 }
 
 .video-container {
     width: 376px;
     height: 848px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 0;
+    transform: none;
+    top: auto;
+    left: auto;
+    flex-shrink: 0;
 }
 
 .video-container iframe {
@@ -1114,6 +1117,97 @@ p {
 
 .projects-page .content {
     transform: none !important;
+}
+
+.project-content {
+    display: flex;
+    gap: 4rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -4rem;
+}
+
+.project-details {
+    flex: 1;
+    max-width: 600px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.project-details.fade-in {
+    opacity: 1;
+}
+
+.project-details .info-box {
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.97);
+    width: 100%;
+}
+
+.project-details h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-details i {
+    font-size: 1.6rem;
+}
+
+.project-details p,
+.project-details li {
+    color: #444;
+    font-style: normal;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.project-details li::before {
+    display: none;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.8rem;
+}
+
+.skills-grid span {
+    background: rgba(160, 108, 213, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.video-container {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+}
+
+/* Add this to ensure the info-box width doesn't override */
+.info-box.overdue-box {
+    width: 320px !important;
 }
   </rewritten_file>
   
