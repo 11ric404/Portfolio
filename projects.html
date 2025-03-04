@@ -21,6 +21,9 @@
             <a href="jobcord.html" class="info-box jobcord-box" onclick="handleJobcordClick(event)">
                 <img src="assets/JOB.png" alt="JobCord" class="jobcord-img">
             </a>
+            <a href="supernovasiege.html" class="info-box supernova-box" onclick="handleSupernovaClick(event)">
+                <img src="assets/SS.gif" alt="Supernova Siege" class="supernova-img">
+            </a>
         </div>
     </div>
 
@@ -59,6 +62,16 @@
             
             setTimeout(() => {
                 window.location = 'jobcord.html';
+            }, 500);
+        }
+
+        function handleSupernovaClick(e) {
+            e.preventDefault();
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+            
+            setTimeout(() => {
+                window.location = 'supernovasiege.html';
             }, 500);
         }
 
